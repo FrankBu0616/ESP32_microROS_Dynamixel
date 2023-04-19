@@ -100,6 +100,8 @@ public:
 	
 	void setJointPosition(int id, int value);
 	void setJointSpeed(int id, int value);
+	void setPWMSpeed(int id, int value);
+	void enableMaxVelocity(int id);
 	
 	void LEDON(int id);
 	void LEDOFF(int id);

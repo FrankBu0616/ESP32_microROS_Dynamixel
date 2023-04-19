@@ -7,9 +7,9 @@
  * 
  * Modified to work only with Dynamixel XL-330 actuator.
  * 
- * Modifications made by Rei Lee
+ * Modifications made by Rei Lee and Frank Bu
  * Webpage: https://infosci.cornell.edu/~reilee/
- * Email: wl593@cornell.edu
+ * Email: wl593@cornell.edu, fb266@cornell.edu
  * 
  * This file can be used and be modified by anyone, 
  * don't forget to say thank you to OP!
@@ -81,9 +81,24 @@ void XL330::setJointPosition(int id, int value) {
 }
 
 void XL330::setJointSpeed(int id, int value) {
+	int Address = XL_GOAL_VELOCITY;
+
+	sendPacket_4bytes(id, Address, value);
+	this->stream->flush();
+	nDelay(NANO_TIME_DELAY);
+}
+
+void XL330::setPWMSpeed(int id, int value) {
 	int Address = XL_GOAL_PWM;
 
 	sendPacket(id, Address, value);
+	this->stream->flush();
+	nDelay(NANO_TIME_DELAY);
+}
+
+void XL330::enableMaxVelocity(int id) {
+	int Address = XL_VELOCITY_LIMIT;
+	sendPacket_4bytes(id, Address, 2046);
 	this->stream->flush();
 	nDelay(NANO_TIME_DELAY);
 }
