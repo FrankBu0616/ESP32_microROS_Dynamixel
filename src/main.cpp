@@ -128,8 +128,8 @@ void setup() {
   IPAddress agent_ip(192, 168, 1, 2);
   size_t agent_port = 8888;
 
-  char ssid[] = "Enoki"; // "KittyCatter"; // "Enoki";
-  char psk[]= "W0nton$oup"; // "FluffyLink"; // "W0nton$oup";
+  char ssid[] = "wifi";
+  char psk[]= "password";
   set_microros_wifi_transports(ssid, psk, agent_ip, agent_port);
 
   // Setup and initiate Software Serial for robot
