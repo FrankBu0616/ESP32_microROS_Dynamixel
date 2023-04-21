@@ -168,7 +168,6 @@ void setup() {
 
   // Blink LED once the server is up
   blink_esp32_led();
-  delay(10);
   blink_motor_leds();
 }
 
