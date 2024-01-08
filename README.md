@@ -1,6 +1,6 @@
 # micro_movement
 
-Template to build customized robot with Dynamixel 330 motors and ESP32. Motor control is managed by micro-ROS. Therefore, heavy computation can be off-load elsewhere. The goal of this repo is to provide a template to control small robots (power by micro-controllers) with ROS 2.
+Template to build customized robot with Dynamixel 330 motors and ESP32 (For ESP32-CAM, check out [here](https://github.com/FrankBu0616/esp32cam_ros)). Motor control is managed by micro-ROS. Therefore, heavy computation can be off-load elsewhere. The goal of this repo is to provide a template to control small robots (power by micro-controllers) with ROS 2.
 
 The Dynamixle Motor interface is based on Dr. Rei Lee's [Dynamixel_XL330_Servo_Library](https://github.com/rei039474/Dynamixel_XL330_Servo_Library).
 
